@@ -8,8 +8,10 @@ $this->title = 'Тестовое задание №1';
 ?>
 <h1>Тестовое задание №1</h1>
 
-<!-- Флеш-сообщения с результами загрузки ссылки -->
+<p>Источник данных: <?= Html::a('ссылка', 'http://www.cbr.ru/scripts/XML_daily.asp'); ?>.</p>
+
 <?php if (Yii::$app->session->hasFlash('success')): ?>
+    <!-- Флеш-сообщение с результами загрузки ссылки -->
     <div class="alert alert-success alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <?php echo Yii::$app->session->getFlash('success'); ?>
@@ -17,6 +19,7 @@ $this->title = 'Тестовое задание №1';
 <?php endif; ?>
 
 <?php if (Yii::$app->session->hasFlash('error')): ?>
+    <!-- Флеш-сообщение с результами загрузки ссылки -->
     <div class="alert alert-danger alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <?php echo Yii::$app->session->getFlash('error'); ?>

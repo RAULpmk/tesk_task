@@ -26,8 +26,9 @@ AppAsset::register($this);
     <div class="container">
         <ul class="nav nav-pills">
             <li role="presentation"<?php if(Yii::$app->request->url=='/'): echo ' class="active"'; endif; ?>><?= Html::a('Главная', '/'); ?></li>
-            <li role="presentation"<?php if(Yii::$app->request->url=='/currency/index'): echo ' class="active"'; endif; ?>><?= Html::a('Тестовое задание №1', '/currency/index'); ?></li>
-            <li role="presentation"<?php if(Yii::$app->request->url=='/task2'): echo ' class="active"'; endif; ?>><?= Html::a('Тестовое задание №2', '/'); ?></li>
+            <li role="presentation"<?php if(strpos(Yii::$app->request->url, '/database/') !== false): echo ' class="active"'; endif; ?>><?= Html::a('База данных', '/database/index'); ?></li>
+            <li role="presentation"<?php if(strpos(Yii::$app->request->url, '/currency/') !== false): echo ' class="active"'; endif; ?>><?= Html::a('Тестовое задание №1', '/currency/index'); ?></li>
+            <li role="presentation"<?php if(strpos(Yii::$app->request->url, '/time/') !== false): echo ' class="active"'; endif; ?>><?= Html::a('Тестовое задание №2', '/time/index'); ?></li>
         </ul>
 
     </div>
